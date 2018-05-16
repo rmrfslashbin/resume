@@ -1,0 +1,148 @@
+@CHARSET "UTF-8";
+
+@media screen {
+    body {
+        color: rgb(100,100,100);
+        background: rgb(250,250,250)
+    }
+    
+    a {
+        color: rgb(100,100,100);
+        text-decoration: underline;
+    }
+
+    li {
+        padding: 0.25em;
+    }
+
+    ul li span {
+        display: inline-block;  
+        vertical-align: middle;
+    }
+
+    ul li:before{
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;       
+    }
+    
+    .contentbox .header {
+        color: rgb(32, 121, 199); 
+ 
+    }
+    .print-contacts {
+        visibility: hidden;
+        display: none;
+    }
+    
+    .screen-contacts {
+        visibility: visible;
+    }
+    
+    .nametitle {
+        margin-left: 0.25em;
+        font-size: 2.25em; 
+        font-weight: bold; 
+        color: black;
+    }
+
+}
+
+@media print {
+    body {
+        font-size: 0.99em;
+    }
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .print-contacts {
+        visibility: visible;
+    }
+    
+    .screen-contacts {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+.top {
+	vertical-align: top;
+	padding-top: 0.25em;
+}
+
+.subtext {
+    font-family: Courier, monospace; 
+    font-size: 0.85em; 
+    font-weight: 100 
+}
+
+.subtext::after {
+    content: '\A';
+    white-space: pre;
+}
+
+.nametitle {
+    font-size: 2.25em; 
+    font-weight: bold; 
+    color: black;
+}
+
+.contentbox .header {
+    margin-top: 3em;
+    font-family: Courier, monospace; 
+    font-size: 0.95em; 
+    font-weight: bold; 
+    text-transform: uppercase;
+}
+
+.job .company {
+    font-size: 1.25em; 
+    color: black;
+    font-weight: bold;
+}
+.job .company::after {
+    content: " "
+}
+
+.job .city {
+    font-size: 1.25em; 
+    color: black;
+}
+
+.job .city::after {
+    content: " - ";
+}
+
+
+.job .role {
+    font-size: 1.25em; 
+    color: black;
+    font-style: italic;
+}
+
+.job .role::after {
+    content: '\A';
+    white-space: pre;
+}
+
+.job .date {
+    font-family: Courier, monospace;
+    font-size: 0.75em; 
+    font-weight: 100;
+    color: rgb(100,100,100);
+}
+
+.job .date .month {
+    text-transform: uppercase;
+}
+
+.job ul {
+    font-size: 1em;
+}
+
+.certs dd {
+    font-style: italic;
+}
